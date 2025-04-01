@@ -667,7 +667,7 @@ const Chat = () => {
                 if (!appStateContext?.state.currentChat?.messages) {
                   let err: Error = {
                     ...new Error(),
-                    message: 'Failure fetching current chat state.'
+                    message: 'Es ist ein Fehler aufgetreten.'
                   }
                   throw err
                 }
@@ -836,7 +836,7 @@ const Chat = () => {
                     <div className={styles.chatMessageGpt}>
                       <Answer
                         answer={{
-                          answer: "Generating answer...",
+                          answer: "Ich überlege ...",
                           citations: [],
                           generated_chart: null
                         }}
@@ -933,7 +933,7 @@ const Chat = () => {
               </Stack>
               <QuestionInput
                 clearOnSend
-                placeholder="Type a new question..."
+                placeholder="Geben Sie hier ihre Frage oder Aufgabe ein ..."
                 disabled={isLoading}
                 onSend={(question, id) => {
                   appStateContext?.state.isCosmosDBAvailable?.cosmosDB
